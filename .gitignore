@@ -1,0 +1,12 @@
+# Vite-Related
+dist
+
+# PNPM Files
+.pnpm-store
+node_modules
+
+# Vitest Files
+coverage
+
+# macOS-specific files
+.DS_Store
