@@ -15,5 +15,6 @@
     "test:unit": "vitest --run --config \"./vitest.config.unit.ts\"",
     "test:main": "vitest --run --config \"./vitest.config.main.ts\"",
     "lint:types": "tsc --noEmit"
-  }
+  },
+  "version": null
 }
