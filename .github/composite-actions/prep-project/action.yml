@@ -1,0 +1,17 @@
+name: Node Setup Ubuntu
+description: Sets up Node, PNPM, and installs packages.
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install Dependencies
+      run: pnpm install --frozen-lockfile
+      shell: bash
+
+    - name: Install Playwright Dependencies
+      run: pnpm exec playwright install chromium --with-deps
+      shell: bash
+
+    - name: Build
+      run: pnpm run turbo:build
+      shell: bash

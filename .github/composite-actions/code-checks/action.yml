@@ -1,0 +1,21 @@
+name: Code Checks
+description: Checks code for compliance using linting, tests, etc.
+
+runs:
+  using: "composite"
+  steps:
+    - name: Linting
+      run: pnpm run lint:biome
+      shell: bash
+
+    - name: Type Checks
+      run: pnpm run turbo:types
+      shell: bash
+
+    - name: Unit Tests
+      run: pnpm run turbo:test:unit
+      shell: bash
+
+    - name: Main Tests
+      run: pnpm run turbo:test:main
+      shell: bash

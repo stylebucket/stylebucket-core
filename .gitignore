@@ -1,5 +1,7 @@
-# Vite-Related
+# Build
 dist
+build
+.turbo
 
 # PNPM Files
 .pnpm-store
@@ -10,3 +12,9 @@ coverage
 
 # macOS-specific files
 .DS_Store
+
+# Local Testing
+local
+
+# Docker
+.docker

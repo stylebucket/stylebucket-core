@@ -5,11 +5,16 @@
     "dockerfile": "Dockerfile"
   },
   "runArgs": ["--name", "stylebucket-core.dev"],
-  "postCreateCommand": ["pnpm", "install"],
+  "postCreateCommand": ["bash", "./.devcontainer/postcreate.sh"],
   "remoteUser": "node",
   "customizations": {
     "vscode": {
-      "extensions": ["esbenp.prettier-vscode"]
+      "extensions": [
+        "biomejs.biome",
+        "esbenp.prettier-vscode",
+        "redhat.vscode-yaml",
+        "styled-components.vscode-styled-components"
+      ]
     }
   }
 }

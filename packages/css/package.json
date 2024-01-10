@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json.schemastore.org/package",
+  "name": "@stylebucket/css",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "description": "CSS Package for Stylebucket core.",
+  "author": {
+    "name": "Brett Wood",
+    "url": "https://github.com/woodbrettm"
+  },
+  "bugs": "https://github.com/stylebucket/stylebucket-core/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stylebucket/stylebucket-core",
+    "directory": "packages/css"
+  },
+  "keywords": [
+    "css-in-js",
+    "css"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=7.0.0"
+  },
+  "main": "./build/main.js",
+  "types": "./build/main.d.ts",
+  "exports": {
+    ".": {
+      "import": "./build/main.js",
+      "types": "./build/main.d.ts"
+    }
+  },
+  "files": [
+    "build"
+  ],
+  "devDependencies": {
+    "typescript": "5.3.3",
+    "tsup": "8.0.1",
+    "vitest": "1.1.3",
+    "@stylebucket/compiler": "workspace:*"
+  },
+  "scripts": {
+    "test:unit": "vitest --run",
+    "lint:types": "tsc --noEmit",
+    "watch": "tsup --watch",
+    "build": "tsup"
+  }
+}

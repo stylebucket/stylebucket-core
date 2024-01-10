@@ -1,4 +1,9 @@
 FROM node:20
 
-RUN corepack prepare pnpm@latest --activate && \
-    npm install -g pnpm
+# PNPM
+ENV PNPM_HOME="/pnpm"
+ENV PATH="$PNPM_HOME:$PATH"
+RUN corepack enable
+
+# Playwright Dependencies
+RUN pnpm dlx playwright install-deps chromium

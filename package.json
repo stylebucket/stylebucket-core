@@ -1,12 +1,41 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "@stylebucket/core",
-  "version": "0.0.0",
   "private": true,
   "type": "module",
   "author": {
     "name": "Brett Wood",
-    "url": "https://woodbrettm.com/"
+    "url": "https://github.com/woodbrettm"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "description": "Stylebucket core modules",
+  "keywords": [
+    "css-in-js",
+    "css"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=7.0.0"
+  },
+  "devDependencies": {
+    "typescript": "5.3.3",
+    "turbo": "1.11.3",
+    "playwright": "1.40.1",
+    "@playwright/test": "1.40.1",
+    "@changesets/cli": "2.27.1",
+    "@types/node": "20.10.6",
+    "@biomejs/biome": "1.4.1"
+  },
+  "scripts": {
+    "turbo:test:main": "turbo run test:main",
+    "turbo:test:unit": "turbo run test:unit",
+    "turbo:watch": "turbo run watch",
+    "turbo:build": "turbo run build",
+    "turbo:types": "turbo run lint:types",
+    "lint:biome": "biome lint .",
+    "changeset:add": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:publish": "changeset publish",
+    "preinstall": "npx -y only-allow pnpm"
+  }
 }
