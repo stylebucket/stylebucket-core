@@ -1,5 +1,5 @@
 import { test, expect, describe, expectTypeOf } from 'vitest';
-import { stripQueryParams } from './plugin';
+import { stripQueryParams } from './ids';
 
 describe('stripQueryParams Function', () => {
 
