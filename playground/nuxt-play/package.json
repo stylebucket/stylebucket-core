@@ -1,0 +1,19 @@
+{
+  "name": "nuxt-play",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "play:build": "nuxt build",
+    "play:dev": "nuxt dev",
+    "play:generate": "nuxt generate",
+    "play:preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "nuxt": "3.9.3",
+    "vue": "3.4.15",
+    "vue-router": "4.2.5",
+    "@stylebucket/vite-plugin": "workspace:*",
+    "@stylebucket/css": "workspace:*"
+  }
+}
