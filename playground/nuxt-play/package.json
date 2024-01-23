@@ -7,7 +7,7 @@
     "play:dev": "nuxt dev",
     "play:generate": "nuxt generate",
     "play:preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "play:prep": "nuxt prepare"
   },
   "devDependencies": {
     "nuxt": "3.9.3",

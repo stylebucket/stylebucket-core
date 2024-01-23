@@ -9,6 +9,9 @@ export default defineNuxtConfig({
       minify: false,
     },
   },
+  telemetry: {
+    enabled: false,
+  },
   experimental: {
     typedPages: true,
   },
