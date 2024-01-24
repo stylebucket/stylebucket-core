@@ -34,9 +34,11 @@
   "files": [
     "build"
   ],
+  "peerDependencies": {
+    "vite": ">=5.0.0"
+  },
   "dependencies": {
     "defu": "6.1.4",
-    "vite": "5.0.11",
     "@stylebucket/compiler": "workspace:*"
   },
   "devDependencies": {
