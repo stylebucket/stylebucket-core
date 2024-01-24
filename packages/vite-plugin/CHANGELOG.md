@@ -1,5 +1,11 @@
 # @stylebucket/vite-plugin
 
+## 0.1.2
+
+### Patch Changes
+
+- ba6ed07: Remove Vite Dependency
+
 ## 0.1.1
 
 ### Patch Changes
