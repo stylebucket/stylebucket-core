@@ -18,3 +18,7 @@ local
 
 # Docker
 .docker
+
+# Nuxt
+.nuxt
+.output

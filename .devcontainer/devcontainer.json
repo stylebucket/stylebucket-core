@@ -10,6 +10,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "vue.volar",
         "biomejs.biome",
         "esbenp.prettier-vscode",
         "redhat.vscode-yaml",
