@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # Used for DevContainer postCreateCommand
-pnpm install
-pnpm exec playwright install chromium
+pnpm install --frozen-lockfile
+pnpm exec playwright install chromium --with-deps
