@@ -2,4 +2,4 @@
 
 # Used for DevContainer postCreateCommand
 pnpm install --frozen-lockfile
-pnpm exec playwright install chromium --with-deps
+pnpm exec playwright install chromium
