@@ -2,6 +2,7 @@
   "name": "nuxt-play",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@8.15.8",
   "scripts": {
     "play:build": "nuxt build",
     "play:dev": "nuxt dev",
