@@ -8,6 +8,7 @@
     "url": "https://github.com/woodbrettm"
   },
   "license": "MIT",
+  "packageManager": "pnpm@8.15.8",
   "description": "Stylebucket core modules",
   "keywords": [
     "css-in-js",
@@ -15,7 +16,7 @@
   ],
   "engines": {
     "node": ">=18.0.0",
-    "pnpm": ">=7.0.0"
+    "pnpm": ">=8.15.8"
   },
   "devDependencies": {
     "typescript": "5.3.3",
@@ -35,7 +36,6 @@
     "lint:biome": "biome lint .",
     "changeset:add": "changeset",
     "changeset:version": "changeset version",
-    "changeset:publish": "changeset publish",
-    "preinstall": "npx -y only-allow pnpm"
+    "changeset:publish": "changeset publish"
   }
 }

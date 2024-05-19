@@ -114,3 +114,25 @@ import { ids, colors } from './MyComponent.style';
 
 // rest of your component logic
 ```
+
+## Escaping Strings
+
+Certain characters in CSS need to be escaped (like `:` and `@`).
+However simply doing `\:` and `\@` isn't as straightforward as the
+escape will also apply in Javascript. Thus cancelling out the escape
+character. Below is a guide on where a double escape is needed.
+
+```typescript
+// dont, as '\' will be dropped
+const rootTag = '.@root';
+const rootTag = `.\@root`;
+
+// do
+const rootTag = '.\\@root';
+const rootTag = `.\\@root`;
+const rootTag = String.raw`.\@root`;
+
+// also works
+import { css } from '@stylebucket/css';
+const rootTag = css`.\@root`;
+```

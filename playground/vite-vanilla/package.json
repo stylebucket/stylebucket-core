@@ -2,6 +2,7 @@
   "name": "@stylebucket/core.playground.vite-vanilla",
   "private": true,
   "type": "module",
+  "packageManager": "pnpm@8.15.8",
   "scripts": {
     "play:dev": "vite",
     "play:build": "vite build",

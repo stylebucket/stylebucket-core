@@ -1,32 +1,38 @@
 import { test, expect } from 'vitest';
-import { parseCss } from '@stylebucket/compiler';
-
 import { css } from './css';
 
 const color = 'green';
+const size = 14;
 
 const styles = css`
 
   .test-class {
     color: ${color};
-    font-size: 12px;
+    font-size: ${size}px;
   }
 
   .another-test-class {
     background: ${color};
   }
 
+  /* Some CSS Comment */
+  .\@root {
+    font-size: 10px;
+  }
+
 `;
 
 test('css function', () => {
-
-  const expectRes = (''
-    + '.test-class{color:green;font-size:12px}'
-    + '.another-test-class{background:green}'
+  const stylesMinified = styles.replace(/\s/g,'');
+  const stylesMinifiedExpect = (''
+    + '.test-class{color:green;font-size:14px;}'
+    + '.another-test-class{background:green;}'
+    + '/*SomeCSSComment*/'
+    + '.\\@root{font-size:10px;}'
   );
-
-  const { css: parsed } = parseCss(styles);
-
-  expect(parsed).toBe(expectRes);
-
+  /* Need to double escape ('.\\') only for the test case
+     as we need to escape the escape in this string.
+     The css`` func only outputs a single escape
+     as written */
+  expect(stylesMinified).toBe(stylesMinifiedExpect);
 });
