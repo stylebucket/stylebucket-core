@@ -4,9 +4,8 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "runArgs": ["--name", "stylebucket-core.dev"],
-  "postCreateCommand": ["bash", "./.devcontainer/postcreate.sh"],
   "remoteUser": "node",
+  "postCreateCommand": ["bash", "./.devcontainer/postcreate.sh"],
   "customizations": {
     "vscode": {
       "extensions": [
